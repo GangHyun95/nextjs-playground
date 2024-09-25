@@ -5,7 +5,7 @@ type Props = {
 };
 export default function page({ params }: Props) {
     console.log(params);
-    return <div>{params.category}</div>;
+    return <div>{params.category}페이지</div>;
 }
 
 export function generateStaticParams() {
