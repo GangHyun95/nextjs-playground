@@ -1,0 +1,26 @@
+[
+    {
+        "id": "example1",
+        "title": "Javascript 기초",
+        "category": "javascript",
+        "content": "Javascript 기초의 Content" 
+    },
+    {
+        "id": "example2",
+        "title": "Javascript 심화",
+        "category": "javascript",
+        "content": "Javascript 심화의 Content" 
+    },
+    {
+        "id": "example3",
+        "title": "React 기초",
+        "category": "react",
+        "content": "React 기초의 Content" 
+    },
+    {
+        "id": "example4",
+        "title": "React 심화",
+        "category": "react",
+        "content": "React 심화의 Content" 
+    }
+]
