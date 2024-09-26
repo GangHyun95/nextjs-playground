@@ -1,10 +1,18 @@
 import { getPosts } from '@/api/post';
 import Link from 'next/link';
 
-export const revalidate = 3;
+// export const revalidate = 3;
 
 export default async function PostPage() {
     const posts = await getPosts();
+    const res = await fetch('https://api.adviceslip.com/advice', {
+        // next: { revalidate: 3},
+        // cache: 'force-cache',
+        // next: { revalidate: 0 },
+        cache: 'no-store',
+    });
+    const data = await res.json();
+    const advice = data.slip.advice;
 
     return (
         <>
@@ -18,6 +26,7 @@ export default async function PostPage() {
                     </li>
                 ))}
             </ul>
+            <h1>{advice}</h1>
         </>
     );
 }
