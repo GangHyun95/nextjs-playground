@@ -1,9 +1,11 @@
 import { getPosts } from '@/api/post';
 import Link from 'next/link';
 
+export const revalidate = 3;
+
 export default async function PostPage() {
     const posts = await getPosts();
-    
+
     return (
         <>
             <h1>전체 포스트</h1>

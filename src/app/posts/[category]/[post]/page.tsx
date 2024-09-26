@@ -6,6 +6,7 @@ type Props = {
         post: string;
     };
 };
+export const revalidate = 3;
 
 export default async function PostPage({ params }: Props) {
     const post = await getPost(params.post);

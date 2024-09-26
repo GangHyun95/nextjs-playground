@@ -7,6 +7,8 @@ type Props = {
     };
 };
 
+export const revalidate = 3;
+
 export default async function CategoryPage({ params }: Props) {
     const categories = getCategories();
     const posts = await getPostsByCategory(params.category);
